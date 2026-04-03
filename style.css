@@ -1,0 +1,164 @@
+/* ==================== VARIABLES ==================== */
+:root {
+    --color-primary: #000;
+    --color-background: #fff;
+    --color-border: #ccc;
+
+    --font-main: 'Calibri', sans-serif;
+
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+
+    --content-width: 700px;
+}
+
+/* ==================== BASE ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background: var(--color-background);
+    color: var(--color-primary);
+    line-height: 1.6;
+}
+
+/* ==================== LAYOUT ==================== */
+.portfolio {
+    max-width: 900px;
+    margin: auto;
+    padding: var(--spacing-md);
+}
+
+.portfolio__center {
+    text-align: center;
+}
+
+/* ==================== HEADER ==================== */
+.header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.header__profile {
+    display: flex;
+    justify-content: center;
+}
+
+.header__info {
+    text-align: center;
+}
+
+.header__name {
+    font-size: 28px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.header__title {
+    font-size: 16px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.header__contact {
+    font-size: 14px;
+}
+
+.header__links {
+    font-family: var(--font-main);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.header__links a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header__links a:hover {
+    text-decoration: underline;
+}
+
+/* ==================== CONTENT ==================== */
+.content {
+    max-width: var(--content-width);
+    margin: var(--spacing-lg) auto;
+    text-align: left;
+}
+
+.content h2 {
+    margin-bottom: var(--spacing-sm);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 5px;
+}
+
+/* ==================== EXPERIENCE ==================== */
+.experience {
+    margin-top: var(--spacing-md);
+}
+
+.experience h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.experience p {
+    font-size: 13px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.experience ul {
+    padding-left: 18px;
+}
+
+.experience li {
+    margin-bottom: 5px;
+}
+
+
+/* ==================== EDUCATION ==================== */
+.education {
+    margin-top: var(--spacing-md);
+}
+
+.education h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.education p {
+    font-size: 13px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.education ul {
+    padding-left: 18px;
+}
+
+.education li {
+    margin-bottom: 5px;
+}
+
+
+
+/* ==================== SKILLS ==================== */
+.content p {
+    margin-top: var(--spacing-sm);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .portfolio {
+        padding: var(--spacing-sm);
+    }
+
+    .header__name {
+        font-size: 22px;
+    }
+
+    .content {
+        width: 100%;
+    }
+}
