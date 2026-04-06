@@ -163,3 +163,170 @@ body {
         width: 100%;
     }
 }
+
+/* ==================== PROFILE IMAGE ==================== */
+.header__profile {
+    position: relative;
+    display: flex;
+    justify-content: center; /* keep content centered */
+    align-items: center;
+}
+
+.header__info {
+    text-align: center; /* keep original center alignment */
+}
+
+/* Image positioned to the right without affecting layout */
+.header__image-wrapper {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header__image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var(--color-border);
+}
+
+/* ==================== MODAL ==================== */
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    z-index: 999;
+}
+
+.image-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.image-modal__img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+/* ===== EXPERIENCE WITH GALLERY ===== */
+.experience--with-gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* LEFT SIDE (TEXT) */
+.experience__content {
+    flex: 1;
+}
+
+/* RIGHT SIDE (GALLERY) */
+.experience__gallery {
+    width: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin-top: 2px; /* aligns nicely with h3 */
+}
+
+/* ===== THUMBNAILS ===== */
+.gallery__img {
+    width: 100%;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ===== MODAL EXTENSION ===== */
+.modal__content {
+    position: relative;
+    text-align: center;
+}
+
+.modal__caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 14px;
+    background: rgba(0,0,0,0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* ===== ARROWS ===== */
+.modal__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    user-select: none;
+}
+
+.modal__arrow--left {
+    left: 20px;
+}
+
+.modal__arrow--right {
+    right: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .experience--with-gallery {
+        flex-direction: column;
+    }
+
+    .experience__content,
+    .experience__gallery {
+        width: 100%;
+    }
+
+    .gallery__img {
+        height: 80px;
+    }
+}
+
+.gallery__more {
+    position: relative;
+}
+
+.gallery__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+}
