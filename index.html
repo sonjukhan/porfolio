@@ -7,7 +7,13 @@
     <meta name="author" content="Sydul Islam Khan">
     <title>Sydul Islam Khan - Assistant Cook</title>
     <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
 </head>
+<!-- Image Modal -->
+<div class="image-modal" id="imageModal">
+    <img src="profile.jpeg" alt="Full Image" class="image-modal__img">
+</div>
+
 <body>
     <main class="portfolio">
         <div class="portfolio__center">
@@ -15,6 +21,10 @@
             <!-- Header -->
             <header class="header">
                 <div class="header__profile">
+                    <div class="header__image-wrapper">
+                        <img src="profile.jpeg" alt="Profile" class="header__image" id="profileImage">
+                    </div>
+
                     <div class="header__info">
                         <h1 class="header__name">Sydul Islam Khan</h1>
                         <p class="header__title">Assistant Cook</p>
@@ -43,17 +53,35 @@
             <section class="content">
                 <h2>Work Experience</h2>
 
-                <div class="experience">
-                    <h3>Assistant Cook — Kebab BD Special</h3>
-                    <p>Dec 2023 - Present | Poland</p>
-                    <ul>
-                        <li>Prepared ingredients including vegetables, meats, and sauces</li>
-                        <li>Assisted in grilling, frying, and basic cooking tasks</li>
-                        <li>Maintained cleanliness of kitchen equipment and workstations</li>
-                        <li>Ensured food safety and proper storage practices</li>
-                    </ul>
+                <!-- FIRST JOB WITH GALLERY -->
+                <div class="experience experience--with-gallery">
+
+                    <div class="experience__content">
+                        <h3>Assistant Cook — Kebab BD Special</h3>
+                        <p>Dec 2023 - Present | Poland</p>
+                        <ul>
+                            <li>Prepared ingredients including vegetables, meats, and sauces</li>
+                            <li>Assisted in grilling, frying, and basic cooking tasks</li>
+                            <li>Maintained cleanliness of kitchen equipment and workstations</li>
+                            <li>Ensured food safety and proper storage practices</li>
+                        </ul>
+                    </div>
+
+                    <!-- IMAGE GRID -->
+                    <div class="experience__gallery">
+                        <img src="food_imgs/Chess-ball.jpeg" class="gallery__img" data-index="0" alt="Chess Ball">
+                        <img src="food_imgs/Set-menu.jpeg" class="gallery__img" data-index="1" alt="Set Menu">
+                        <div class="gallery__more">
+                            <img src="food_imgs/special-soups.jpeg" class="gallery__img" alt="More">
+                            <span class="gallery__overlay">+7</span>
+                        </div>
+                    </div>
+
+                    
+
                 </div>
 
+                <!-- SECOND JOB (NO GALLERY) -->
                 <div class="experience">
                     <h3>Kitchen Hand — Imperial Hotel Bangladesh</h3>
                     <p>Mar 2022 - Feb 2023 | Bangladesh</p>
@@ -64,6 +92,7 @@
                         <li>Completed cleaning and restocking tasks</li>
                     </ul>
                 </div>
+
             </section>
 
             <!-- Skills -->
@@ -96,5 +125,17 @@
 
         </div>
     </main>
+
+    <div class="image-modal" id="galleryModal">
+        <span class="modal__arrow modal__arrow--left">&#10094;</span>
+        
+        <div class="modal__content">
+            <img class="image-modal__img" id="galleryModalImg">
+            <p class="modal__caption" id="galleryCaption"></p>
+        </div>
+
+        <span class="modal__arrow modal__arrow--right">&#10095;</span>
+    </div>
+
 </body>
 </html>
